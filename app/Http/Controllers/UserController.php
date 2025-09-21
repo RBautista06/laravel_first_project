@@ -13,7 +13,19 @@ class UserController extends Controller
         return redirect('/');
     }
 
-    
+    public function login(Request $request){
+        $incomingFields = $request->validate([
+            'login_name' => 'required',
+            'login_pass' => 'required',
+        ]);
+
+        // check if the username and password is match in the database
+        // only if that is successfull regenerate session
+        if(auth()->attempt(['name'=> $incomingFields['login_name'], 'password'=>$incomingFields['login_pass']])){
+         $request->session()->regenerate();
+        }
+        return redirect('/');
+    }
 
     public function register(Request  $request) {
 
