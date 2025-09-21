@@ -25,6 +25,15 @@
       <button>Create New Post</button>
     </form>
   </div>
+    <div style="border: 2px solid black; ">
+      <h2>All Posts</h2>
+      @foreach($posts as $post)
+      <div style="border: 2px solid red; padding: 10px; background: gray;">
+        <h3>{{$post['title']}}</h3>
+        <p>{{$post['body']}}</p>
+      </div>
+      @endforeach
+  </div>
   @else
   <div style="border: 2px solid black; ">
       <h1 >Register</h1>
