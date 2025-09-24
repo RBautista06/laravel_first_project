@@ -20,7 +20,8 @@ Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
 
-Route::post('/create-post', [PostController::class, 'createPost']);
-Route::get('/edit-post/{post}', [PostController::class, 'showEditScreen']);
+Route::post('/create-post', [PostController::class, 'createPost']); // insert
+Route::get('/edit-post/{post}', [PostController::class, 'showEditScreen']); // fetch
 
 Route::put('/edit-post/{post}', [PostController::class, 'updatePost']); // update
+Route::delete('/delete-post/{post}', [PostController::class, 'deletePost']); // delete

@@ -8,4 +8,10 @@ class Post extends Model
 {
 
     protected $fillable = ['title', 'body', 'user_id'];
+
+
+    // this will populate or get the user information based on the user_id in the database
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

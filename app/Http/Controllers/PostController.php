@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function deletePost (Post $post) {
+        if(auth()->user()->id === $post['user_id']){
+            $post->delete();
+        }
+
+        return redirect('/');
+    }
+
     public function showEditScreen(Post $post){
         //check if thje user is the author of the post
         if(auth()->user()->id !== $post['user_id']){
