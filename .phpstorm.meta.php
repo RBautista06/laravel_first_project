@@ -2152,8 +2152,7 @@ namespace PHPSTORM_META {
 'tinker.dont_alias',);
         registerArgumentsSet('middleware', 
 'web','api',);
-        registerArgumentsSet('routes', 
-'storage.local',);
+        registerArgumentsSet('routes', 'storage.local',);
         registerArgumentsSet('views', 
 'home','laravel-exceptions-renderer::components.badge','laravel-exceptions-renderer::components.empty-state','laravel-exceptions-renderer::components.file-with-line','laravel-exceptions-renderer::components.formatted-source',
 'laravel-exceptions-renderer::components.frame','laravel-exceptions-renderer::components.frame-code','laravel-exceptions-renderer::components.header','laravel-exceptions-renderer::components.http-method','laravel-exceptions-renderer::components.icons.alert',
